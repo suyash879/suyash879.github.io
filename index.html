@@ -24,7 +24,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      animation: fadeInDown 1s ease-out;
+      animation: zoomIn 1s ease-out;
     }
 
     header .logo {
@@ -59,13 +59,13 @@
       border-radius: 5px;
       text-decoration: none;
       font-weight: bold;
-      transition: all 0.3s ease;
+      transition: transform 0.4s ease, background-color 0.3s ease;
       margin-top: 1em;
     }
 
     .yt-link:hover {
+      transform: scale(1.08);
       background-color: rgba(255, 255, 255, 0.1);
-      transform: scale(1.05);
     }
 
     .yt-icon {
@@ -87,14 +87,16 @@
       margin-bottom: 2em;
       border-radius: 10px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeSlideIn 1s forwards;
     }
 
-    .project:hover {
-      transform: scale(1.03);
-      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
-    }
+    .project:nth-child(1) { animation-delay: 0.3s; }
+    .project:nth-child(2) { animation-delay: 0.5s; }
+    .project:nth-child(3) { animation-delay: 0.7s; }
+    .project:nth-child(4) { animation-delay: 0.9s; }
+    .project:nth-child(5) { animation-delay: 1.1s; }
 
     .project h2 {
       margin-top: 0;
@@ -123,10 +125,11 @@
       margin-top: 2em;
     }
 
-    @keyframes fadeInDown {
+    /* Animations */
+    @keyframes fadeSlideIn {
       from {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(30px);
       }
       to {
         opacity: 1;
@@ -134,14 +137,14 @@
       }
     }
 
-    @keyframes fadeInUp {
+    @keyframes zoomIn {
       from {
+        transform: scale(0.95);
         opacity: 0;
-        transform: translateY(20px);
       }
       to {
+        transform: scale(1);
         opacity: 1;
-        transform: translateY(0);
       }
     }
   </style>
@@ -153,7 +156,7 @@
       <h1>My Coding Projects</h1>
       <p>Explore the creative coding projects I've developed using Python, HTML, and CSS!</p>
       <a href="https://www.youtube.com/@yourchannelname" target="_blank" class="yt-link">
-        <img src="youtube-logo.png" alt="YouTube" class="yt-icon" />
+        <img src="your-youtube-logo.png" alt="YouTube" class="yt-icon" />
         Visit my YouTube Channel
       </a>
     </div>
