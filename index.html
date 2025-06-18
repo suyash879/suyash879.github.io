@@ -37,6 +37,7 @@
 
     header div {
       text-align: center;
+      position: relative;
     }
 
     header h1 {
@@ -46,6 +47,31 @@
 
     header p {
       margin: 0.5em 0 0;
+    }
+
+    .yt-link {
+      display: inline-flex;
+      align-items: center;
+      color: white;
+      background-color: transparent;
+      padding: 0.5em 1em;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin-top: 1em;
+    }
+
+    .yt-link:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: scale(1.05);
+    }
+
+    .yt-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 0.5em;
     }
 
     .container {
@@ -98,41 +124,26 @@
     }
 
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-
-    .yt-link {
-      display: inline-flex;
-      align-items: center;
-      color: #ff0000;
-      background-color: transparent;
-      padding: 0.6em 1.2em;
-      margin-top: 1em;
-      border: 2px solid #ff0000;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
-      transition: all 0.3s ease;
-    }
-
-    .yt-link:hover {
-      background-color: #ff0000;
-      color: white;
-      transform: scale(1.05);
-    }
-
-   .yt-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 0.6em;
-}
   </style>
 </head>
 <body>
@@ -141,6 +152,10 @@
     <div>
       <h1>My Coding Projects</h1>
       <p>Explore the creative coding projects I've developed using Python, HTML, and CSS!</p>
+      <a href="https://www.youtube.com/@yourchannelname" target="_blank" class="yt-link">
+        <img src="your-youtube-logo.png" alt="YouTube" class="yt-icon" />
+        Visit my YouTube Channel
+      </a>
     </div>
   </header>
 
@@ -165,25 +180,19 @@
 
     <div class="project">
       <h2>Book word</h2>
-      <p>An application full of genres of books containing mesmerizing authors and characters with interactive and easy to use UI made with Thunkable using scratch blocks. Google Drive contains app screenshot and files.</p>
+      <p>An application full of genres of books containing mesmerizing authors and characters with interactive and easy to use UI made with Thunkable using scratch blocks.</p>
       <a href="https://drive.google.com/drive/folders/1S88_wFyfaydJPyf-YfX1e8DPo_UAg4_h" target="_blank">View on Google Drive</a>
     </div>
 
     <div class="project">
       <h2>Discord ping-pong-bot</h2>
-      <p>A Python-based bot that responds to commands in your server. It replies to !hello with a greeting and to !ping with “Pong!”. It runs using discord.py, reads messages with proper permissions, and is hosted on Replit using a secure token.</p>
+      <p>A Python-based bot that responds to commands in your server. It replies to !hello with a greeting and to !ping with “Pong!”.</p>
       <a href="https://discord.com/oauth2/authorize?client_id=1374623511607250964&scope=bot&permissions=534723950656">Install in Server</a>
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 JScode. Coded with ❤ and caffeine.</p>
-    <p>
-      <a href="https://www.youtube.com/@yourchannelname" target="_blank" class="yt-link">
-        <img src="youtube-logo.png" alt="YouTube Logo" class="yt-icon" />
-        Visit my YouTube Channel
-      </a>
-    </p>
   </footer>
 </body>
 </html>
