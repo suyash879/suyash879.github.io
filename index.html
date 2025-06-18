@@ -98,25 +98,13 @@
     }
 
     @keyframes fadeInDown {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .yt-link {
@@ -124,12 +112,13 @@
       align-items: center;
       color: #ff0000;
       background-color: transparent;
-      padding: 0.5em 1em;
+      padding: 0.6em 1.2em;
       margin-top: 1em;
-      border-radius: 5px;
       border: 2px solid #ff0000;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 1em;
       transition: all 0.3s ease;
     }
 
@@ -139,11 +128,10 @@
       transform: scale(1.05);
     }
 
-    .yt-link svg {
-      margin-right: 0.5em;
-      width: 20px;
-      height: 20px;
-      fill: currentColor;
+    .yt-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 0.6em;
     }
   </style>
 </head>
@@ -192,11 +180,7 @@
     <p>&copy; 2025 JScode. Coded with ❤ and caffeine.</p>
     <p>
       <a href="https://www.youtube.com/@yourchannelname" target="_blank" class="yt-link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512">
-          <path
-            d="M549.7 124.1c-6.3-23.8-24.9-42.5-48.5-48.9C457.1 64 288 64 288 64s-169.1 0-213.2 11.2c-23.6 6.4-42.2 25.1-48.5 48.9C16 168.2 16 256 16 256s0 87.8 10.3 131.9c6.3 23.8 24.9 42.5 48.5 48.9C118.9 448 288 448 288 448s169.1 0 213.2-11.2c23.6-6.4 42.2-25.1 48.5-48.9C560 343.8 560 256 560 256s0-87.8-10.3-131.9zM232 336V176l142 80-142 80z"
-          />
-        </svg>
+        <img src="youtube-logo.png" alt="YouTube Logo" class="yt-icon" />
         Visit my YouTube Channel
       </a>
     </p>
