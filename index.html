@@ -18,56 +18,37 @@
       transition: background 0.5s ease, color 0.5s ease;
     }
 
-    body.dark-mode {
-      background: linear-gradient(to right, #1e1e1e, #2c2c2c);
-      color: #f0f0f0;
-    }
-
     header {
       background: linear-gradient(to right, #2c3e50, #34495e);
       color: white;
       padding: 2em 1em;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
       animation: fadeInDown 1s ease-out;
     }
 
+    .header-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
     .logo {
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      margin-right: 20px;
       object-fit: cover;
     }
 
-    header div {
-      text-align: center;
-      flex-grow: 1;
-    }
-
-    header h1 {
+    .title-text h1 {
       margin: 0;
       font-size: 2.5em;
     }
 
-    header p {
-      margin: 0.5em 0 0;
-    }
-
-    .toggle-btn {
-      background: #2980b9;
-      color: white;
-      border: none;
-      padding: 0.6em 1em;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 0.9em;
-      transition: background 0.3s ease;
-    }
-
-    .toggle-btn:hover {
-      background: #1c5980;
+    .title-text p {
+      margin-top: 0.5em;
     }
 
     .container {
@@ -83,13 +64,10 @@
       margin-bottom: 2em;
       border-radius: 10px;
       box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+      transition-property: transform, box-shadow, background;
+      transition-duration: 0.3s, 0.3s, 0.5s;
+      transition-timing-function: ease, ease, ease;
       animation: fadeInUp 1s ease forwards;
-    }
-
-    body.dark-mode .project {
-      background: #2e2e2e;
-      box-shadow: 0 6px 18px rgba(255, 255, 255, 0.1);
     }
 
     .project:hover {
@@ -137,12 +115,13 @@
 </head>
 <body>
   <header>
-    <img src="logo.png" alt="My Logo" class="logo"/>
-    <div>
-      <h1>My Coding Projects</h1>
-      <p>Explore the creative coding projects I've developed using Python, HTML, and CSS!</p>
+    <div class="header-content">
+      <img src="logo.png" alt="My Logo" class="logo"/>
+      <div class="title-text">
+        <h1>My Coding Projects</h1>
+        <p>Explore the creative coding projects I've developed using Python, HTML, and CSS!</p>
+      </div>
     </div>
-    <button class="toggle-btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
   </header>
 
   <div class="container">
@@ -166,21 +145,13 @@
 
     <div class="project">
       <h2>Book word</h2>
-      <p>A application full of genres of books containing mesmerising authors and characters with interactive and easy to use UI
-        made with thunkable without code using scratch blocks. google drive contains app screenshot and
-      </p>
-      <a href="https://drive.google.com/drive/folders/1S88_wFyfaydJPyf-YfX1e8DPo_UAg4_h" target="_blank">View on Google drive</a>
+      <p>An application full of genres of books containing mesmerizing authors and characters with an interactive and easy-to-use UI made with Thunkable, without code using Scratch blocks. Google Drive contains app screenshots.</p>
+      <a href="https://drive.google.com/drive/folders/1S88_wFyfaydJPyf-YfX1e8DPo_UAg4_h" target="_blank">View on Google Drive</a>
     </div>
   </div>
 
   <footer>
     <p>&copy; 2025 JScode. Coded with ❤ and caffeine.</p>
   </footer>
-
-  <script>
-    function toggleDarkMode() {
-      document.body.classList.toggle('dark-mode');
-    }
-  </script>
 </body>
 </html>
